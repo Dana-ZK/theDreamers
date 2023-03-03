@@ -1,0 +1,34 @@
+.tourList{
+  text-align: left;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.tourName:hover{
+  background-color: #c60e5a;
+  color: #aae1f5;
+}
+
+.tourDate{
+  text-align: left;
+  margin: 1rem 0;
+  width: 20%;
+  padding: 0.3rem;
+}
+.tourName{
+  text-align: left;
+  margin: 1rem 0;
+  width: 40%;
+  padding: 0.3rem;
+}
+.tourCountry{
+  text-align: left;
+  width: 20%;
+  padding: 0.3rem;
+}
+.tourCity{
+  text-align: left;
+  width: 20%;
+  padding: 0.3rem;
+}

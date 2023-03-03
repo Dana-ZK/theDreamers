@@ -1,0 +1,9 @@
+.block_box {
+  min-height: 35rem;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+
+}
+

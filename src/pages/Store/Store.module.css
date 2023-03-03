@@ -1,0 +1,8 @@
+.store_blok{
+  /* width: 100%; */
+  display: flex;
+  margin: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

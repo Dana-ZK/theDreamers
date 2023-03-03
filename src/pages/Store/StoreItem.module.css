@@ -1,0 +1,30 @@
+.container{
+  width: 28vw;
+    height: 40vh;
+    margin: 0.5rem;
+    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c60e5a;
+  border-radius: 10px;
+}
+.title{
+  text-align: center;
+  background-color: #70afc6;
+  background-image: linear-gradient(90deg, #c60e5a, #07455c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title:hover{
+ font-weight: 600;
+}
+.text{
+  text-align: center;
+  padding: 1rem;
+  background-color: #70afc6;
+  background-image: linear-gradient(45deg, #07455c, #c60e5a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
