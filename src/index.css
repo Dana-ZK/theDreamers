@@ -1,4 +1,4 @@
-#root {
+*{
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   margin: 0;
@@ -7,10 +7,17 @@
 }
 body {
   background: #aae1f5;
+  height: 100%;
   color: #c60e5a;
   position: relative;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+}
+#root{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }

@@ -14,7 +14,7 @@ const Store = () => {
             <div key={id}>
               <StoreItem
               name ={name}
-              description = {description}
+              // description = {description}
               price = {price}
               category = {category}
               />

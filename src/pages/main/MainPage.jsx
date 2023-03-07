@@ -1,3 +1,5 @@
+import Music from 'pages/Music/Music';
+import Store from 'pages/Store/Store';
 import Tour from 'pages/Tour/Tour';
 import React from 'react';
 import classes from './MainPage.module.css'
@@ -15,35 +17,19 @@ const MainPage = () => {
       <div className="store">
       <h2>Store</h2>
         <div>
-          <div>card</div>
-          <div>card</div>
-          <div>card</div>
+          <Store/>
         </div>
       </div>
       <div className="music">
-      <h2>music</h2>
-        <div className="social">
-          <ul>
-            <li>yt</li>
-            <li>spotify</li>
-            <li>imusic</li>
-          </ul>
-        </div>
+      <h2>Music</h2>
+      <h4>Listen now on:</h4>
         <div className="music">
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-          </ul>
+          <Music/>
         </div>
       </div>
       <div className="video">
       <h2>Videos</h2>
-        <div>v1</div>
-        <div>v2</div>
-        <div>v3</div>
+        
       </div>
 
 

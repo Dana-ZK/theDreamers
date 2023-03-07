@@ -1,0 +1,52 @@
+.musicContainer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 1rem;
+}
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socialItemContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socialItem{
+  width: 3.5rem;
+  height: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.socialItem:hover{
+  transition: 1s;
+  transform: scale(1.3);
+}
+.socialItemLink {
+  text-decoration:none;
+  color: #c60e5a;
+  padding: 1rem;
+}
+.socialItemLink:visited {
+  color: #c60e5a;
+}
+.listOfMusic{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: .5rem;
+  margin: 0.3rem;
+  border: 1px solid #c60e5a;
+  border-radius: 10px;
+}
+.musicTitle{
+  width: 30%;
+  padding: 0.2rem;
+}
+.musicText{
+  width: 65%;
+
+}

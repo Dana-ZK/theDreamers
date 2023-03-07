@@ -139,6 +139,4 @@ export const store= [
       "price": 19.99,
       "description": "Challenge yourself with this Dreamers puzzle"
     }
-     
-
 ]

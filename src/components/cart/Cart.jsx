@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Music = () => {
+const Cart = () => {
   return (
     <div>
-      Music
+      
     </div>
   );
 };
 
-export default Music;
+export default Cart;

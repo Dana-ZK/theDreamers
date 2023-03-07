@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Video = () => {
+
+const StoreCard = () => {
   return (
     <div>
-      Video
+      card store
     </div>
   );
 };
 
-export default Video;
+export default StoreCard;
