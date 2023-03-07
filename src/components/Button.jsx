@@ -9,7 +9,6 @@ const FilledHover = styled.button`
       color: #aae1f5;
       background-color: #c60e5a;
       border: 2px solid #c60e5a;
-      /* border-radius: 15.75em; */
       text-transform: uppercase;
       font-family: "DM Sans", sans-serif;
       text-align: center;
@@ -29,9 +28,8 @@ const FilledHover = styled.button`
       padding: 0.5em 2em;
       text-align: center;
       background-color: #aae1f5;
-      color: #000;
+      color: #c60e5a;
       border: 2px solid #c60e5a;
-      /* border-radius: 18.75em; */
       text-transform: uppercase;
       transition: 1s;
       cursor: pointer;

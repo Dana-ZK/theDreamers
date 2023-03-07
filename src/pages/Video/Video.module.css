@@ -19,9 +19,13 @@
 .videoTitle{
   text-align: center;
   font-style: 2rem;
+  background-color: #70afc6;
+  background-image: linear-gradient(90deg, #c60e5a, #07455c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
 .videoImage{
   width: 100%;
-  height: 93%;
+  height: 90%;
 }

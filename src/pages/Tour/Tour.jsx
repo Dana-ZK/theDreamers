@@ -8,24 +8,27 @@ import TourItem from './TourItem';
 const Tour = () => {
   // const [modalActive, setModalActive] = useState(true)
   return (
+    <>
+    <h2>Our tour</h2>
     <ul className={classes.tourContainer}>
         {tourList.map((tour)=>{
-              let {stadium,city, date, country, id} = tour;
-              return(
-                <li key={id}>
+          let {stadium,city, date, country, id} = tour;
+          return(
+            <li key={id}>
                <TourItem 
                 stadium={stadium} 
                 city={city} 
                 date={date} 
                 country={country}
-               />
+                />
                 {/* <Button filled  onClick={()=> setModalActive(true)} > Tickets</Button> */}
                 <hr/>
                 {/* <Modal active={modalActive} setActive={setModalActive}></Modal> */}
                 </li>
               )
-          })}
+            })}
     </ul>
+    </>
   );
 };
 

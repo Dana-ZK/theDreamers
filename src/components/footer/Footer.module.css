@@ -4,9 +4,14 @@
   align-items: center;
   justify-content: space-around;
 }
+p{
+  background-color: #70afc6;
+  background-image: linear-gradient(90deg, #c60e5a, #07455c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .socialContainer{
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
 }
 .social{
@@ -21,6 +26,7 @@
   height: 3rem;
   padding: 0.5rem;
   cursor: pointer;
+  
 }
 .socialItem:hover{
   transition: 1s;

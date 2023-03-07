@@ -5,7 +5,6 @@ import React from 'react';
 import classes from './MainPage.module.css'
 
 
-
 const MainPage = () => {
 
   return (
@@ -17,6 +16,7 @@ const MainPage = () => {
       <div className="store">
       <h2>Store</h2>
         <div>
+          
           <Store/>
         </div>
       </div>
