@@ -2,14 +2,11 @@ import React from 'react';
 import { tourList } from 'data/tours';
 import classes from './Tour.module.css'
 import TourItem from './TourItem';
-// import Modal from 'components/Modal';
-// import Button from 'components/Button';
 
 const Tour = () => {
-  // const [modalActive, setModalActive] = useState(true)
   return (
     <>
-    <h2>Our tour</h2>
+    <h2>Live Dates</h2>
     <ul className={classes.tourContainer}>
         {tourList.map((tour)=>{
           let {stadium,city, date, country, id} = tour;
@@ -21,9 +18,7 @@ const Tour = () => {
                 date={date} 
                 country={country}
                 />
-                {/* <Button filled  onClick={()=> setModalActive(true)} > Tickets</Button> */}
                 <hr/>
-                {/* <Modal active={modalActive} setActive={setModalActive}></Modal> */}
                 </li>
               )
             })}

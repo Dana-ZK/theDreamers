@@ -1,15 +1,14 @@
 import axios from 'axios';
+import { videoUrl } from 'data/dataApi';
 import React, { useState } from 'react';
 import classes from './Video.module.css'
+import VideoItem from './VideoItem';
 
 const Video = () => {
   const [video, setVideo] = useState(null);
 
   const fetchData = async () => {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/albums/1/photos?_limit=16"
-    );
-
+    const response = await axios.get(videoUrl)
     setVideo(response.data);
   };
 
@@ -18,19 +17,15 @@ const Video = () => {
         {video &&
           video.map((v) => {
             return (
-              <div className={classes.video} key={v.id}>
-                <h3 className={classes.videoTitle}>{v.title}</h3>
-                <img src={v.url} alt={v.title} className={classes.videoImage} />
-              </div>
+              <VideoItem
+              id={v.id}
+              title = {v.title}
+              url = {v.url}
+              />
             );
           })}
     </div>
   );
-  // return (
-  //   <section className={classes.videoContainer}>
-  //     Video
-  //   </section>
-  // );
 };
 
 export default Video;

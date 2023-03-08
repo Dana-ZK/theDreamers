@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from 'images/logo.png';
 import  Hamburger_icon from 'images/Hamburger_icon.png';
 import classes from './NavigatorMenu.module.css';
-import {FaFacebookSquare, FaYoutube,FaTwitterSquare,FaSpotify,FaApple,FaTiktok,FaInstagram,FaAmazon,FaSoundcloud} from 'react-icons/fa'
+import {FaFacebookSquare, FaYoutube,FaTwitterSquare,FaSpotify,FaApple,FaTiktok,FaInstagram,FaAmazon,FaSoundcloud, FaCartArrowDown} from 'react-icons/fa'
 
 
 
@@ -32,6 +32,7 @@ const NavigatorMenu = () => {
           <img src={Hamburger_icon} alt="burger_menu" className={classes.burger_img} />
         </label>
         <nav className={classes.menu_items}>
+          
           <ul>
             <li>
             <Link to='/tour' className={classes.link}> Tour </Link>
@@ -47,6 +48,9 @@ const NavigatorMenu = () => {
             </li>
             <li>
             <Link to='/about'className={classes.link} >About</Link>
+            </li>
+            <li>
+            <Link to='/cart' className={classes.link}> <FaCartArrowDown/> </Link>
             </li>
           </ul>
         </nav>

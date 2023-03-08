@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import classes from './Music.module.css'
 import { FaYoutube,FaSpotify,FaApple,FaSoundcloud,FaPlay} from 'react-icons/fa'
 import axios from 'axios';
+import { musicUrl } from 'data/dataApi';
 
 
 const Music = () => {
   const [music, setMusic] = useState(null);
   const fetchData = async ()=>{
-    const response = await axios.get(
-      "https://hp-api.onrender.com/api/spells?_limit=10"
-    );
+    const response = await axios.get(musicUrl);
     setMusic(response.data);
   }
 

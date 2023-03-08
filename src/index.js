@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import NavigatorMenu from 'components/header/NavigatorMenu/NavigatorMenu';
+import Cart from 'components/cart/Cart';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,6 +26,7 @@ root.render(
                 <Route path='/video' element={<> <NavigatorMenu/><Video/><Footer/></>}/>
                 <Route path='/about' element={<> <NavigatorMenu/><About/><Footer/></>}/>
                 <Route path='/music' element={<> <NavigatorMenu/><Music/><Footer/></>}/>
+                <Route path='/cart' element={<> <NavigatorMenu/><Cart/><Footer/></>}/>
            
         </Routes>
   </Router>

@@ -1,6 +1,5 @@
 .main{
   min-height: 100vh;
-  margin-top: -10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,4 +20,18 @@ padding: 1rem;
 
 .title{
   text-align: center;
+}
+.storeBlock{
+  display: flex;
+}
+.speachSection{
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: justify;
+  line-height: 1.5;
+  background-color: #70afc6;
+  background-image: linear-gradient(90deg, #c60e5a, #07455c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-spacing: .5rem
 }
