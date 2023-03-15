@@ -1,5 +1,6 @@
 .store_blok{
   display: flex;
+  padding-top: 3rem;
   margin: 1rem;
   flex-wrap: wrap;
   justify-content: center;

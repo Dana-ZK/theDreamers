@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: start;
   margin: 1rem;
+  padding-top: 3rem;
 }
 .social{
   display: flex;

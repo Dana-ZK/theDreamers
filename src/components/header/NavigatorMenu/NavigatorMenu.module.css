@@ -47,7 +47,11 @@ button {
   color: #c60e5a;
   padding: 1rem;
 }
-.link:visited {
+.linkLast {
+  text-decoration:none;
+  color: #c60e5a;
+}
+.link:visited .linkLast:visited{
   color: #c60e5a;
 }
 .menu_items ul > li:hover {
@@ -152,7 +156,10 @@ button {
   .link {
     color: #aae1f5; 
   }
-  .link:visited {
+  .linkLast {
+    color: #aae1f5; 
+  }
+  .link:visited .linkLast:visited{
     color: #aae1f5;
   }
   .btn_login {
@@ -187,9 +194,12 @@ button {
     background-color: #c60e5a;
   }
   .link {
-    color: #aae1f5;
+    color: #aae1f5; 
   }
-  .link:visited {
+  .linkLast {
+    color: #aae1f5; 
+  }
+  .link:visited .linkLast:visited{
     color: #aae1f5;
   }
 }

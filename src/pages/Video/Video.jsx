@@ -18,6 +18,7 @@ const Video = () => {
           video.map((v) => {
             return (
               <VideoItem
+              key={v.id}
               id={v.id}
               title = {v.title}
               url = {v.url}

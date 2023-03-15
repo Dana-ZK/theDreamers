@@ -21,6 +21,7 @@ const MainPage = () => {
           return(
             <div key={id}>
                <TourItem 
+               id={id}
                 stadium={stadium} 
                 city={city} 
                 date={date} 
@@ -40,6 +41,7 @@ const MainPage = () => {
             return(
               <div key={id}>
                 <StoreItem
+                id={id}
                 name ={name}
                 description = {description}
                 price = {price}

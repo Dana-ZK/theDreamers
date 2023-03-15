@@ -1,35 +1,33 @@
-import React from 'react';
-import CartListItem from './CartListItem';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { FaCartArrowDown } from 'react-icons/fa';
+import classes from './Cart.module.css';
+import CartMenu from './CartMenu';
+import { calcTotalPrice } from 'components/utils';
+import CountItemsInCart from './coutItemCircle/CountItemsInCart';
 
-const Cart = ()=>{
-  return(
-    <p>Cart</p>
-  )
+function Cart() {
+  const [isCartMenuVisible, setIsCartMenuVisible] = useState(false)
+  const items = useSelector(state => state.cart.itemsInCart);
+  const totalPrice = calcTotalPrice(items);
+
+  return (
+
+    <div className={classes.cart_block}  onClick = {()=> setIsCartMenuVisible(!isCartMenuVisible)}>
+      <CountItemsInCart count = {items.length}/>
+      <FaCartArrowDown 
+      size={16}
+     
+        />
+        {
+          totalPrice > 0 ? (
+            <span className={classes.cart_price}> {totalPrice.toFixed(2)} $</span>
+          ) : null
+        }
+        {isCartMenuVisible && <CartMenu items={items} onClick={()=>{}}/>}
+    </div>
+  );
+
 }
-// ({
-//   cartList,
-//   addPhoneInCart,
-//   removePhoneFromCart,
-//   deletePurchasedPhone
-// }) => {
-//   return (
-//     <ul className="cart-list">
-//       {cartList.map((cart) => {
-//         const { id } = cart;
-
-//         return (
-//           <li key={id}>
-//             <CartListItem
-//               cart={cart}
-//               addPhoneInCart={addPhoneInCart}
-//               removePhoneFromCart={removePhoneFromCart}
-//               deletePurchasedPhone={deletePurchasedPhone}
-//             />
-//           </li>
-//         );
-//       })}
-//     </ul>
-//   );
-// };
 
 export default Cart;

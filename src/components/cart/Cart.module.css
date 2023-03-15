@@ -1,0 +1,7 @@
+.cart_block{
+  display: flex;
+}
+.cart_price{
+  padding-left: 1rem;
+  color: #aae1f5;
+}
