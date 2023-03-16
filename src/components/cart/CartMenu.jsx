@@ -1,6 +1,6 @@
+import React from 'react';
 import Button from 'components/Button';
 import { calcTotalPrice } from 'components/utils';
-import React from 'react';
 import CartItem from './cartItem/CartItem';
 import classes from './CartMenu.module.css'
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { tourList } from 'data/tours';
+import TourItem from 'components/tour/tourItem/TourItem';
 import classes from './Tour.module.css'
-import TourItem from './TourItem';
 
 const Tour = () => {
   return (
@@ -9,16 +9,17 @@ const Tour = () => {
     <h2>Live Dates</h2>
     <ul className={classes.tourContainer}>
         {tourList.map((tour)=>{
-          let {stadium,city, date, country, id} = tour;
+          let {name,city, date, country, id,price} = tour;
           return(
             <li key={id}>
                <TourItem 
-                stadium={stadium} 
+               id={id}
+                name={name} 
                 city={city} 
                 date={date} 
                 country={country}
+                price={price}
                 />
-                <hr/>
                 </li>
               )
             })}

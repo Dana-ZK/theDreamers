@@ -2,7 +2,7 @@ import axios from 'axios';
 import { videoUrl } from 'data/dataApi';
 import React, { useState } from 'react';
 import classes from './Video.module.css'
-import VideoItem from './VideoItem';
+import VideoItem from 'components/videoItem/VideoItem';
 
 const Video = () => {
   const [video, setVideo] = useState(null);

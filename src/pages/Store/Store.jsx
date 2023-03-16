@@ -1,8 +1,7 @@
 import React from "react";
 import { store } from "data/store";
-import StoreItem from "./StoreItem";
+import StoreItem from "components/store/storeItem/StoreItem";
 import classes from "./Store.module.css";
-// import Cart from "components/cart/Cart";
 
 const Store = () => {
   return (

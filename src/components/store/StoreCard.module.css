@@ -1,0 +1,20 @@
+.link {
+  margin: 1rem;
+  width: 10%;
+  color: #c60e5a; 
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.link:visited{
+  color: #c60e5a;
+}
+.itemCardContainer{
+ display: flex;
+ align-items: center;
+ margin-left: auto;
+  margin-right: auto;
+}
+.itemCard{
+  width: 70vw;
+}

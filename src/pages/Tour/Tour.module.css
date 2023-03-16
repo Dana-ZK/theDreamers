@@ -1,6 +1,7 @@
 .tourContainer{
+  min-height: 100vh;
   list-style: none;
   width: 100%;
   padding-top: 3rem;
-
+  padding-right: 1.5rem;
 }

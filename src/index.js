@@ -1,6 +1,9 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import { store } from "./redux";
+import { Provider } from "react-redux";
+import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
 import Tour from "./pages/Tour/Tour";
@@ -8,13 +11,12 @@ import Store from "./pages/Store/Store";
 import Video from "./pages/Video/Video";
 import About from "./pages/About/About";
 import Music from "./pages/Music/Music";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import NavigatorMenu from "components/header/NavigatorMenu/NavigatorMenu";
-import Cart from "components/cart/Cart";
-import { Provider } from "react-redux";
-import { store } from "./redux";
+import StoreCard from "components/store/StoreCard";
+import TourCard from "components/tour/TourCard";
+import CartPage from "pages/CartPage/CartPage";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -79,17 +81,39 @@ root.render(
               </>
             }
           />
-          {/* <Route
-            path="/cart"
+          <Route
+            path="/store/:name"
             element={
               <>
                 {" "}
                 <NavigatorMenu />
-                <Cart />
+                <StoreCard />
                 <Footer />
               </>
             }
-          /> */}
+          />
+          <Route
+            path="/tour/:name"
+            element={
+              <>
+                {" "}
+                <NavigatorMenu />
+                <TourCard />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/order"
+            element={
+              <>
+                {" "}
+                <NavigatorMenu />
+                <CartPage />
+                <Footer />
+              </>
+            }
+          />
         </Routes>
       </Router>
     </Provider>

@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './MainPage.module.css'
 import { store } from 'data/store';
-import StoreItem from 'pages/Store/StoreItem';
+import StoreItem from 'components/store/storeItem/StoreItem';
 import { tourList } from 'data/tours';
-import TourItem from 'pages/Tour/TourItem';
+import TourItem from 'components/tour/tourItem/TourItem';
 
 
 const limitStore = store.slice(0,3)
@@ -16,21 +16,23 @@ const MainPage = () => {
     <main className={classes.main}>
       <div className={classes.tour}>
       <h2>Live Dates</h2>
+      <div className={classes.tourBlock}>
         {limitTour.map((tour)=>{
-          let {stadium,city, date, country, id} = tour;
+          let {name,city, date, country, id, price} = tour;
           return(
             <div key={id}>
                <TourItem 
                id={id}
-                stadium={stadium} 
-                city={city} 
-                date={date} 
-                country={country}
-                />
-                <hr/>
+               name={name} 
+               city={city} 
+               date={date} 
+               price = {price}
+               country={country}
+               />
                 </div>
               )
             })}
+            </div>
       </div>
       <div className="store">
       <h2>Store</h2>

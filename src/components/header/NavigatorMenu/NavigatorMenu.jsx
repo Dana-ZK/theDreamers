@@ -1,10 +1,10 @@
 import React from 'react';
+import {FaFacebookSquare, FaYoutube,FaTwitterSquare,FaSpotify,FaApple,FaTiktok,FaInstagram,FaAmazon,FaSoundcloud} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import logo from 'images/logo.png';
 import  Hamburger_icon from 'images/Hamburger_icon.png';
-import classes from './NavigatorMenu.module.css';
-import {FaFacebookSquare, FaYoutube,FaTwitterSquare,FaSpotify,FaApple,FaTiktok,FaInstagram,FaAmazon,FaSoundcloud} from 'react-icons/fa'
 import Cart from 'components/cart/Cart';
+import classes from './NavigatorMenu.module.css';
 
 
 
