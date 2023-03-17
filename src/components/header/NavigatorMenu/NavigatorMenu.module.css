@@ -36,6 +36,7 @@ button {
   text-transform: uppercase;
   justify-content: space-evenly;
   align-items: center;
+  padding-right: 1rem;
   
 }
 .menu_items ul > li {
@@ -144,6 +145,7 @@ button {
     width: 15em;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-right: 1rem;
   }
   .menu_items ul > li {
     padding: 0.5em;
@@ -155,6 +157,7 @@ button {
   }
   .link {
     color: #aae1f5; 
+    height: 100%;
   }
   .linkLast {
     color: #aae1f5; 

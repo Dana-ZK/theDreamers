@@ -16,6 +16,8 @@ import NavigatorMenu from "components/header/NavigatorMenu/NavigatorMenu";
 import StoreCard from "components/store/StoreCard";
 import TourCard from "components/tour/TourCard";
 import CartPage from "pages/CartPage/CartPage";
+import Login from "pages/Login/Login";
+import Registration from "pages/RegistrationPage/Registration";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -27,6 +29,26 @@ root.render(
           <Route path="/" exact element={<Home />}>
             {" "}
           </Route>
+          <Route
+            path="/login"
+            element={
+              <>
+                {" "}
+                <NavigatorMenu />
+                <Login /> <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/registration"
+            element={
+              <>
+                {" "}
+                <NavigatorMenu />
+                <Registration /> <Footer />
+              </>
+            }
+          />
           <Route
             path="/tour"
             element={

@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaFacebookSquare, FaYoutube,FaTwitterSquare,FaSpotify,FaApple,FaTiktok,FaInstagram,FaAmazon,FaSoundcloud} from 'react-icons/fa'
+import {RiLoginBoxLine} from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import logo from 'images/logo.png';
 import  Hamburger_icon from 'images/Hamburger_icon.png';
@@ -36,6 +37,9 @@ const NavigatorMenu = () => {
           
           <ul>
             <li>
+            <Link to='/login' className={classes.link}> <RiLoginBoxLine />  LogIn</Link>
+            </li>
+            <li>
             <Link to='/tour' className={classes.link}> Tour </Link>
             </li>
             <li>
@@ -51,7 +55,6 @@ const NavigatorMenu = () => {
             <Link to='/about'className={classes.link} >About</Link>
             </li>
             <li className={classes.linkLast}><Cart/>
-            {/* <Link to='/cart' className={classes.linkLast}>  </Link> */}
             </li>
           </ul>
         </nav>
