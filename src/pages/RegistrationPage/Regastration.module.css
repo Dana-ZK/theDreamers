@@ -1,9 +1,4 @@
-.btn {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  margin: 1em;
-}
+
 .form_login {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -14,21 +9,4 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-}
-.box_loginForm {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  
-}
-.title {
-  padding: 0 1rem;
-}
-.input{
-  height: 2.5rem;
-  width: 25vw;
-  margin: .5rem;
-  background-color: transparent;
-  border:1px solid  #c60e5a;
 }
