@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Regastration.module.css';
-import RegisterForm from 'components/Register/RegisterForm';
+import RegisterForm from 'components/register/RegisterForm';
 
 const Registration = () => {
 

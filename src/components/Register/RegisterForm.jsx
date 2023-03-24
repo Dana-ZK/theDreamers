@@ -1,60 +1,46 @@
-import Button from 'components/Button';
+import React, { useEffect, useState } from 'react';
 import { auth, googleProvider } from 'firebase-config';
 import { createUserWithEmailAndPassword, signInWithPopup,signOut } from 'firebase/auth';
-import React, { useState } from 'react';
-
+import { Link, useNavigate } from 'react-router-dom';
+import Button from 'components/Button';
+import { UserAuth } from 'components/authContext/authContext';
 
 import classes from './RegisterForm.module.css'
 
 const RegisterForm = () => {
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
 
-  // const [user, setUser] = useState({});
-  // onAuthStateChanged(auth, (currentUser) => {
-  //   setUser(currentUser);
-  // });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('')
+  const { createUser } = UserAuth();
+  const navigate = useNavigate()
 
-
-  const register = async ()=>{
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
     try {
-      await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
-    } catch (err) {
-      console.error(err);
+      await createUser(email, password);
+      navigate('/account')
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
     }
-  }
-  const registerWithGoogle = async ()=>{
-    try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (err) {
-      console.error(err);
-    }
-  }
-  const logOut = async ()=>{
-    try {
-      await signOut(auth);
-    } catch (err) {
-      console.error(err);
-    }
-  }
+  };
 
-console.log(auth?.currentUser?.email);
-
+  const [user, setUser] = useState(auth.currentUser);
   return (
-    <form >
+    <div>
+      <div>
+      <p className='py-2'>
+          Already have an account yet?{' '}
+          <Link to='/login' className='underline'>
+            Sign in.
+          </Link>
+          </p>
+      </div>
     <h4> Welcome: </h4>
-      {auth?.currentUser?.email}
-    <div className={classes.box_loginForm}>
-      <label htmlFor="text" className={classes.title}>
-        Enter your name
-      </label>
-      <input 
-      type="text" 
-      id="text" 
-      className={classes.input} 
-      required  
-      />
-    </div>
+      {user != null ? <>{user.email}</>: <>user</>}
+    <form  onSubmit={handleSubmit}>
     <div className={classes.box_loginForm}>
       <label htmlFor="email" className={classes.title}>
         Your email
@@ -63,8 +49,7 @@ console.log(auth?.currentUser?.email);
       type="email" 
       id="email" 
       required 
-      className={classes.input} 
-      onChange={event => {setRegisterEmail(event.target.value)}}
+      className={classes.input}   onChange={(e) => setEmail(e.target.value)}
       />
     </div>
     <div className={classes.box_loginForm}>
@@ -77,12 +62,12 @@ console.log(auth?.currentUser?.email);
       minLength="6" 
       className={classes.input} 
       required  
-      onChange={event => {setRegisterPassword(event.target.value)}}
+      onChange={(e) => setPassword(e.target.value)}
       />
     </div>
     <div>
       <Button
-      onClick={register} 
+      // onClick={register} 
       className={classes.btn} 
       filled
       >
@@ -90,18 +75,13 @@ console.log(auth?.currentUser?.email);
       </Button>
       <Button 
         outlined
-        onClick={registerWithGoogle}
-      >
+        // onClick={registerWithGoogle}
+        >
         Registrate with Google
-      </Button>
-      <Button 
-        outlined
-        onClick={logOut}
-      >
-        LogOut
       </Button>
     </div>
   </form>
+        </div>
   );
 };
 

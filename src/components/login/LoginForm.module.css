@@ -1,0 +1,32 @@
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.box_loginForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  
+}
+.title {
+  padding: 0 1rem;
+}
+.input{
+  height: 2.5rem;
+  width: 25vw;
+  margin: .5rem;
+  background-color: transparent;
+  border:1px solid  #c60e5a;
+}
+.link {
+  text-decoration:none;
+  color: #c60e5a;
+  text-decoration: underline;
+}
+.link:visited .linkLast:visited{
+  color: #c60e5a;
+}

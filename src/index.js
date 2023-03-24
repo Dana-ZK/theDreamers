@@ -19,12 +19,15 @@ import CartPage from "pages/CartPage/CartPage";
 import Login from "pages/Login/Login";
 import Registration from "pages/RegistrationPage/Registration";
 import "./index.css";
+import Account from "pages/Account/Account";
+import { AuthContextProvider } from "components/authContext/authContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ErrorBoundary>
     <Provider store = {store}>
       <Router>
+        <AuthContextProvider>
         <Routes>
           <Route path="/" exact element={<Home />}>
             {" "}
@@ -47,6 +50,16 @@ root.render(
                 <NavigatorMenu />
                 <Registration /> <Footer />
               </>
+            }
+          />
+           <Route
+            path='/account'
+            element={
+              <>
+              <NavigatorMenu/>
+                <Account />
+                <Footer/>
+                </>
             }
           />
           <Route
@@ -137,6 +150,7 @@ root.render(
             }
           />
         </Routes>
+        </AuthContextProvider>
       </Router>
     </Provider>
   </ErrorBoundary>
