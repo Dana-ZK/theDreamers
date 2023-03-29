@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { auth, googleProvider } from 'firebase-config';
-import { createUserWithEmailAndPassword, signInWithPopup,signOut } from 'firebase/auth';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from 'components/Button';
 import { UserAuth } from 'components/authContext/authContext';
@@ -12,7 +10,7 @@ const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('')
-  const { createUser } = UserAuth();
+  const { createUser, loginWithGoogle } = UserAuth();
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
@@ -20,26 +18,42 @@ const RegisterForm = () => {
     setError('');
     try {
       await createUser(email, password);
+      if(!password){ return alert('Wrong password')}
+      if(!email){ return alert('Wrong email')}
+      alert('Welcome!')
       navigate('/account')
     } catch (e) {
       setError(e.message);
       console.log(e.message);
+      alert(`Email is already in use, sign in or use other email, ${e.message}`)
+      
     }
   };
 
-  const [user, setUser] = useState(auth.currentUser);
+  const handleLoginWithGoogle = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      await loginWithGoogle();
+      alert('Welcome!')
+      navigate('/account')
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+      alert(`Email is already in use, sign in or use other email, ${e.message}`)
+      
+    }
+  };
   return (
     <div>
       <div>
-      <p className='py-2'>
+      <p>
           Already have an account yet?{' '}
-          <Link to='/login' className='underline'>
+          <Link to='/login'>
             Sign in.
           </Link>
           </p>
       </div>
-    <h4> Welcome: </h4>
-      {user != null ? <>{user.email}</>: <>user</>}
     <form  onSubmit={handleSubmit}>
     <div className={classes.box_loginForm}>
       <label htmlFor="email" className={classes.title}>
@@ -67,20 +81,19 @@ const RegisterForm = () => {
     </div>
     <div>
       <Button
-      // onClick={register} 
       className={classes.btn} 
       filled
       >
         Create account
       </Button>
+    </div>
+  </form>
       <Button 
         outlined
-        // onClick={registerWithGoogle}
+        onClick = {handleLoginWithGoogle}
         >
         Registrate with Google
       </Button>
-    </div>
-  </form>
         </div>
   );
 };

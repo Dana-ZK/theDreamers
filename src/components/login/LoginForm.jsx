@@ -9,21 +9,28 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const { signIn } = UserAuth();
+  const { signIn, user } = UserAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('')
     try {
       await signIn(email, password)
+      if(!user){ return alert('You need to registrate')}
       navigate('/account')
     } catch (e) {
       setError(e.message)
       console.log(e.message)
+      alert(`Your email or password is incorrect, please check your data, ${e.message}`)
     }
   };
   return (
     <form className={classes.form_login} onSubmit={handleSubmit}>
+      <div >
+      <p> Don't have an account? Please,click here
+      <Link to="/registration" className={classes.link}> for registration </Link>
+      </p>
+      </div>
       <div className={classes.box_loginForm}>
         <label htmlFor="email" className={classes.title}>
           Your email
@@ -41,11 +48,9 @@ const LoginForm = () => {
           {" "}
           Login
         </Button>
+
       </div>
-      <div >
-      <p> Still don't have an account? Please,click here</p>
-      <Link to="/registration" className={classes.link}> <p> for registration </p> </Link>
-      </div>
+       <Link to="/forgot-password" className={classes.link}> Forgot password?</Link>
     </form>
   );
 };

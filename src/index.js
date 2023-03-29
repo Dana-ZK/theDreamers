@@ -21,6 +21,7 @@ import Registration from "pages/RegistrationPage/Registration";
 import "./index.css";
 import Account from "pages/Account/Account";
 import { AuthContextProvider } from "components/authContext/authContext";
+import ForgotPassword from "pages/ForgotPassword/ForgotPassword";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -145,6 +146,17 @@ root.render(
                 {" "}
                 <NavigatorMenu />
                 <CartPage />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/forgot-password"
+            element={
+              <>
+                {" "}
+                <NavigatorMenu />
+                <ForgotPassword />
                 <Footer />
               </>
             }

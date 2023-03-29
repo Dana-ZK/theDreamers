@@ -3,7 +3,7 @@
   border-radius: 6px;
   padding: 3rem;
   text-align: center;
-  width: 50vw;
+  width: 95vw;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -13,4 +13,17 @@
   padding: 2rem;
   font-weight: 700;
   font-size: large;
+}
+.accountContainer{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.accountButtons{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
 }
