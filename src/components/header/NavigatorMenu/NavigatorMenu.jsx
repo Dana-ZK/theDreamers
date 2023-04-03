@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaFacebookSquare, FaYoutube,FaTwitterSquare,FaSpotify,FaApple,FaTiktok,FaInstagram,FaAmazon,FaSoundcloud} from 'react-icons/fa'
+import {FaFacebookSquare, FaYoutube,FaSpotify,FaApple,FaTiktok,FaInstagram,FaSoundcloud, FaUserAstronaut} from 'react-icons/fa'
 import {RiLoginBoxLine} from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import logo from 'images/logo.png';
@@ -13,15 +13,16 @@ const NavigatorMenu = () => {
   return (
     <div className={classes.menu}>
       <div className={classes.social}>
-        <FaFacebookSquare className={classes.socialItem}/>
         <FaYoutube className={classes.socialItem}/>
-        <FaTwitterSquare className={classes.socialItem}/>
         <FaSpotify className={classes.socialItem}/>
+        <FaSoundcloud className={classes.socialItem}/>
         <FaApple className={classes.socialItem}/>
+        <FaFacebookSquare className={classes.socialItem}/>
         <FaTiktok className={classes.socialItem}/>
         <FaInstagram className={classes.socialItem}/>
-        <FaAmazon className={classes.socialItem}/>
-        <FaSoundcloud className={classes.socialItem}/>
+        <div>
+          <Link to='/account' ><FaUserAstronaut className={classes.socialItem}/></Link>
+        </div>
       </div>
       <div className={classes.menu_logo}>
         <Link to="/">

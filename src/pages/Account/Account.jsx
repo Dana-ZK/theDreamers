@@ -30,7 +30,7 @@ const Account = () => {
         Logout
       </Button>
       <Button outlined>
-        <Link to='/forgot-password'> Reset password</Link>
+        <Link to='/forgot-password' className={classes.link} > Reset password</Link>
       </Button>
     </div>
 

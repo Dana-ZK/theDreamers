@@ -27,3 +27,11 @@
   align-items: start;
   justify-content: space-evenly;
 }
+.link {
+  text-decoration:none;
+  color: #c60e5a;
+  padding: 1rem;
+}
+.link:visited{
+  color: #c60e5a;
+}

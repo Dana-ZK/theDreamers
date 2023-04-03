@@ -26,142 +26,142 @@ import ForgotPassword from "pages/ForgotPassword/ForgotPassword";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ErrorBoundary>
-    <Provider store = {store}>
+    <Provider store={store}>
       <Router>
         <AuthContextProvider>
-        <Routes>
-          <Route path="/" exact element={<Home />}>
-            {" "}
-          </Route>
-          <Route
-            path="/login"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <Login /> <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/registration"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <Registration /> <Footer />
-              </>
-            }
-          />
-           <Route
-            path='/account'
-            element={
-              <>
-              <NavigatorMenu/>
-                <Account />
-                <Footer/>
+          <Routes>
+            <Route path="/" exact element={<Home />}>
+              {" "}
+            </Route>
+            <Route
+              path="/login"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <Login /> <Footer />
                 </>
-            }
-          />
-          <Route
-            path="/tour"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <Tour /> <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/store"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <Store />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/video"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <Video />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <About />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/music"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <Music />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/store/:name"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <StoreCard />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/tour/:name"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <TourCard />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/order"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <CartPage />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/forgot-password"
-            element={
-              <>
-                {" "}
-                <NavigatorMenu />
-                <ForgotPassword />
-                <Footer />
-              </>
-            }
-          />
-        </Routes>
+              }
+            />
+            <Route
+              path="/registration"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <Registration /> <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/account"
+              element={
+                <>
+                  <NavigatorMenu />
+                  <Account />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/tour"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <Tour /> <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/store"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <Store />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/video"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <Video />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <About />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/music"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <Music />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/store/:name"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <StoreCard />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/tour/:name"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <TourCard />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/order"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <CartPage />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/forgot-password"
+              element={
+                <>
+                  {" "}
+                  <NavigatorMenu />
+                  <ForgotPassword />
+                  <Footer />
+                </>
+              }
+            />
+          </Routes>
         </AuthContextProvider>
       </Router>
     </Provider>
